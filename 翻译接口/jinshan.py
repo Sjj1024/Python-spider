@@ -19,15 +19,19 @@ class JinShan(object):
 
     # 定义解析数据的方法
     def parse_dict(self, end_dict):
-        ends_data = end_dict["content"]["out"]
+        try:
+            ends_data = end_dict["content"]["out"]
+        except:
+            ends_data = end_dict["content"]["word_mean"]
         print(ends_data)
 
     def run(self):
         # 获取url及参数
+        text = input("请输入：")
         data_parms = {
             "f": " auto",
             "t": " auto",
-            "w": " 坏人"
+            "w": text
         }
         # 发送请求
         res_dict = self.request_url(data_parms)
@@ -37,4 +41,5 @@ class JinShan(object):
 
 
 if __name__ == '__main__':
-    JinShan().run()
+    while True:
+        JinShan().run()
