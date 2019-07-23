@@ -3,11 +3,13 @@ import requests
 import re
 import os
 
+
 class Dagaier(object):
     def __init__(self):
         self.url = "https://1024.fil6.tk/thread0806.php?fid=16"
         self.header = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36",
+            "cookie": "__cfduid=d991240ded8f691413d0a5238e78525ee1563844869; UM_distinctid=16c1c6ba0a3d2-0247f6cbe42a12-c343162-100200-16c1c6ba0a462d; PHPSESSID=cjkptobgiir2bmui06ttr75gi6; 227c9_lastvisit=0%091563848591%09%2Findex.php%3Fu%3D481320%26vcencode%3D5793155999; CNZZDATA950900=cnzz_eid%3D589544733-1563841323-%26ntime%3D1563848242"
         }
 
     # @retry(stop_max_attempt_number=3)
@@ -26,15 +28,23 @@ class Dagaier(object):
     def parse_newurl(self, url_list):
         print(url_list)
         res_html_list = []
-        for i in url_list:
-            url, title = i
-            new_url = "https://1024.fil6.tk/" + url
-            print(new_url)
-            res = requests.get(new_url, headers=self.header)
-            print(res)
-            res_html = res.content.decode("gbk")
-
-            res_html_list.append(res_html)
+        # 获取所有的文章链接
+        # for i in url_list:
+        #     url, title = i
+        #     new_url = "https://1024.fil6.tk/" + url
+        #     print(new_url)
+        #     res = requests.get(new_url, headers=self.header)
+        #     print(res)
+        #     res_html = res.content.decode('gbk', 'ignore')
+        #
+        #     res_html_list.append(res_html)
+        # 获取单个文章链接
+        url, title = url_list[0]
+        new_url = "https://1024.fil6.tk/" + url
+        print(new_url)
+        res = requests.get(new_url, headers=self.header)
+        res_html = res.content.decode('gbk', 'ignore')
+        res_html_list.append(res_html)
         return res_html_list
 
     def parse_jpg(self, html_list):
@@ -46,7 +56,7 @@ class Dagaier(object):
 
     def save_jpg(self, jpg_list):
         str_dir = "dagaier"
-        os.mkdir(str_dir)
+        # os.mkdir(str_dir)
         number = 0
         for jpg_url in jpg_list:
             number += 1
@@ -68,6 +78,7 @@ class Dagaier(object):
         jpg_list = self.parse_jpg(html_list)
         # 保存图片到文件夹中
         self.save_jpg(jpg_list)
+
 
 if __name__ == '__main__':
     Dagaier().run()

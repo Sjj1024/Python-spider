@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
-
 import requests
+import re
 
 new_url = "https://1024.fil6.tk/htm_data/1907/16/3586699.html"
 header = {
@@ -9,7 +8,18 @@ header = {
 }
 print(new_url)
 res = requests.get(new_url, headers=header)
-print(res.content.decode('gb18030', 'ignore'))
+# print(res.content.decode('gbk', 'ignore'))
 # res_html = res.text()
-with open("1.html", 'a+', errors="ignore") as f:
-    f.write(res.content.decode('gb18030', 'ignore'))
+# with open("1.html", 'w') as f:
+#     f.write(res.content.decode('gbk', 'ignore'))
+res_html = res.content.decode('gbk', 'ignore')
+res_jpg = re.findall(r"data-src='(.*?)'", res_html)
+print(res_jpg)
+number = 0
+for i in res_jpg:
+    print(i)
+    number += 1
+    res_jpg = requests.get(i, headers=header)
+    save_path = "{}.jpg".format(number)
+    with open(save_path, "wb") as f:
+        f.write(res_jpg.content)
