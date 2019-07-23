@@ -29,16 +29,31 @@ class Dagaier(object):
         for i in url_list:
             url, title = i
             new_url = "https://1024.fil6.tk/" + url
-            # print(new_url)
+            print(new_url)
             res = requests.get(new_url, headers=self.header)
+            print(res)
             res_html = res.content.decode("gbk")
+
             res_html_list.append(res_html)
         return res_html_list
 
     def parse_jpg(self, html_list):
+        jpg_list = []
         for i in html_list:
-            res_jpg = re.findall(r'', i)
+            res_jpg = re.findall(r"data-src='(.*?)'", i)
+            jpg_list += res_jpg
+        return jpg_list
 
+    def save_jpg(self, jpg_list):
+        str_dir = "dagaier"
+        os.mkdir(str_dir)
+        number = 0
+        for jpg_url in jpg_list:
+            number += 1
+            res_jpg = requests.get(jpg_url, headers=self.header)
+            save_path = str_dir + "/" + "{}.jpg".format(number)
+            with open(save_path, "wb") as f:
+                f.write(res_jpg.content)
 
     def run(self):
         # 生成url
@@ -50,7 +65,9 @@ class Dagaier(object):
         # 请求文章utl
         html_list = self.parse_newurl(url_list)
         # 解析图片链接
-        self.parse_jpg(html_list)
+        jpg_list = self.parse_jpg(html_list)
+        # 保存图片到文件夹中
+        self.save_jpg(jpg_list)
 
 if __name__ == '__main__':
     Dagaier().run()
