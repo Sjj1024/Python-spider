@@ -16,9 +16,10 @@ html = etree.HTML(res.content.decode("utf-8"))
 # 使用xpath获取解析数据
 ip_list = html.xpath("//tr/td[1]/text()")
 
-
 # 定义一个函数筛选出可用的ip,最多尝试三次
 save_use_ip = []
+
+
 @retry(stop_max_attempt_number=3)
 def tiao_ip(ip_dict):
     url2 = "https://www.baidu.com/"
@@ -38,7 +39,6 @@ for ip in ip_list:
     if "\n" not in ip:
         ip_dict["https"] = ip
         ip_dict_list.append(ip_dict)
-
 
 for ip_dict in ip_dict_list:
     try:
