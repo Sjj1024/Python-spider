@@ -45,6 +45,7 @@ for ip_dict in ip_dict_list:
         print("正在尝试ip:{}".format(ip_dict))
         tiao_ip(ip_dict)
     except:
+        print("{}ip不可用---------------".format(ip_dict))
         continue
 
 print(save_use_ip)
