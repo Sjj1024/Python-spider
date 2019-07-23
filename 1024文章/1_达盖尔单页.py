@@ -1,7 +1,7 @@
 # 获取达盖尔单单页文章链接
 import requests
 import re
-from retrying import retry
+import os
 
 class Dagaier(object):
     def __init__(self):
@@ -23,6 +23,23 @@ class Dagaier(object):
         # print(url_list)
         return url_list
 
+    def parse_newurl(self, url_list):
+        print(url_list)
+        res_html_list = []
+        for i in url_list:
+            url, title = i
+            new_url = "https://1024.fil6.tk/" + url
+            # print(new_url)
+            res = requests.get(new_url, headers=self.header)
+            res_html = res.content.decode("gbk")
+            res_html_list.append(res_html)
+        return res_html_list
+
+    def parse_jpg(self, html_list):
+        for i in html_list:
+            res_jpg = re.findall(r'', i)
+
+
     def run(self):
         # 生成url
         # 发送请求获取html
@@ -30,9 +47,10 @@ class Dagaier(object):
         # 解析文章链接 url
         url_list = self.parse_url(res_html)
         # 保存url
-        # print(url_list)
-        for i in url_list:
-            print(i)
+        # 请求文章utl
+        html_list = self.parse_newurl(url_list)
+        # 解析图片链接
+        self.parse_jpg(html_list)
 
 if __name__ == '__main__':
     Dagaier().run()
