@@ -23,10 +23,12 @@ save_use_ip = []
 def tiao_ip(ip_dict):
     url2 = "https://www.baidu.com/"
     res = requests.get(url2, headers=header, proxies=ip_dict, timeout=3)  # 响应超过3秒会报错
-    assert res.status_code == 200
     if res.status_code == 200:
         save_use_ip.append(ip_dict)
         print("{}ip可以使用".format(ip_dict))
+    else:
+        print("{}ip不可用---------------".format(ip_dict))
+    assert res.status_code == 200
 
 
 # 遍历出所有ip，过滤成字典
@@ -34,7 +36,7 @@ ip_dict_list = []
 for ip in ip_list:
     ip_dict = {}
     if "\n" not in ip:
-        ip_dict["HTTPS"] = ip
+        ip_dict["https"] = ip
         ip_dict_list.append(ip_dict)
 
 
