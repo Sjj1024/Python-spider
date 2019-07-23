@@ -11,7 +11,7 @@ url = "https://www.csdn.net/"
 # 设置用户代理
 header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"}
 # 设置IP代理
-proxy = {"https": "35.229.113.175:443"}
+proxy = {'https': 'https:27.72.75.227:8080'}
 # 发送访问请求
 response = requests.get(url, headers=header, proxies=proxy)
 
