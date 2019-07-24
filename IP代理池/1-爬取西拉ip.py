@@ -27,6 +27,8 @@ def tiao_ip(ip_dict):
     if res.status_code == 200:
         save_use_ip.append(ip_dict)
         print("{}ip可以使用".format(ip_dict))
+        with open("xilaip.txt", "a+") as f:
+            f.write(str(ip_dict) + "\n")
     else:
         print("{}ip不可用---------------".format(ip_dict))
     assert res.status_code == 200
