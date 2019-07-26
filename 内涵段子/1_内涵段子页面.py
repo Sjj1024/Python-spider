@@ -51,6 +51,7 @@ class Duanzi(object):
             result = self.parse_data(html)
             # 保存数据
             self.save_data(page, result)
+            print("第{}页数据已经保存完成------------>".format(page))
 
 
 if __name__ == '__main__':
