@@ -43,7 +43,7 @@ class Duanzi(object):
                 f.write(str1)
 
     def run(self):
-        for page in range(1, 5):
+        for page in range(1, 10):
             url = "https://www.neihan-8.com/article/list_5_{}.html".format(page)
             # 发送请求
             html = self.send_request(url)
