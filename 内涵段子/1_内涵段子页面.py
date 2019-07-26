@@ -19,7 +19,8 @@ class Duanzi(object):
         return html
 
     def parse_data(self, html):
-        re_obj = re.compile('<h4>.*?<a href=".*?">(.*?)</a>.*?</h4>', re.S)
+        # 第一层解析
+        re_obj = re.compile('<h4>.*?<a href=".*?">(.*?)</a>.*?</h4>.*?<div class="f18 mb20">(.*?)</div>', re.S)
         result = re_obj.findall(html)
         print(result)
         return result
@@ -37,6 +38,7 @@ class Duanzi(object):
         result = self.parse_data(html)
         # 保存数据
         # self.save_data(result)
+
 
 if __name__ == '__main__':
     Duanzi().run()
