@@ -13,9 +13,6 @@ class Duanzi(object):
     def send_request(self, url):
         response = requests.get(url, headers=self.header)
         html = response.content.decode("gbk")
-        # with open("wenda.html", "a+", encoding="utf-8") as f:
-        #     f.write(html)
-        # print(html)
         return html
 
     def parse_data(self, html):
