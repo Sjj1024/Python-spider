@@ -27,7 +27,7 @@ class Yuanqi(object):
 
     def save_img(self, imgurl):
         image_name = imgurl[-12:]
-        print("正在请求下载{}".format(image_name))
+        print("正在下载妹子{}".format(image_name))
         img_res_cont = requests.get(imgurl, headers=self.header)
         image_path = "some_img/" + image_name
         with open(image_path, "wb") as f:
