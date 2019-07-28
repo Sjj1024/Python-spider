@@ -1,7 +1,6 @@
 # 使用xpath提取响应的文章链接和图片链接
 import requests
 import re
-import os
 
 class Yuanqi(object):
     def __init__(self):
@@ -27,9 +26,9 @@ class Yuanqi(object):
         return img_url_list
 
     def save_img(self, imgurl):
-        img_res_cont = requests.get(imgurl, headers=self.header)
         image_name = imgurl[-12:]
-        print(image_name)
+        print("正在请求下载{}".format(image_name))
+        img_res_cont = requests.get(imgurl, headers=self.header)
         image_path = "some_img/" + image_name
         with open(image_path, "wb") as f:
             f.write(img_res_cont.content)
