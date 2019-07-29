@@ -29,7 +29,6 @@ html_url = driver.current_url
 # print(html_source)
 # 保存到指定的文件夹中
 str_dir = "baidu"
-os.mkdir(str_dir)
 save_path = str_dir + "/" + "baidu.html"
 with open(save_path, "w", encoding="utf-8") as f:
     f.write(html_source)
