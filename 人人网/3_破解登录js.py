@@ -3,6 +3,8 @@ import requests
 import js2py
 
 if __name__ == '__main__':
+    # 创建js环境对象
+    context = js2py.EvalJs()
     # 创建session对象来保存cookie
     session = requests.session()
     session.headers = {
@@ -11,7 +13,17 @@ if __name__ == '__main__':
 
     # codejs缺失rkey，所以需要发送请求获取
     rkey_url = "http://activity.renren.com/livecell/rKey"
-    n = session.get(rkey_url).json()["data"]
+    context.n = session.get(rkey_url).json()["data"]
+    # print(n,"0000000000000000000")
+
+    # 获取执行js需要的相关函数
+    big_url = "http://s.xnimg.cn/a85738/wap/mobile/wechatLive/js/BigInt.js"
+    big_js = session.get(big_url).content.decode()
+    context.execute(big_js)
+
+    rsa_url = "http://s.xnimg.cn/a86836/wap/mobile/wechatLive/js/celllog.js"
+    rsa_js = session.get(rsa_url).content.decode()
+    context.execute(rsa_js)
 
     # 需要执行的js核心代码
     code_js = """
