@@ -49,4 +49,10 @@ if __name__ == '__main__':
     """
 
     context.execute(code_js)
-    print(context.t)
+    print(type(context.t))
+    # print(dir(context.t))
+
+    # 发送登录请求
+    res = session.post(login_url, data=context.t.to_dict())
+    print(res.content.decode())
+
