@@ -4,7 +4,10 @@ from selenium.webdriver.chrome.options import Options
 
 # 创建chrome参数对象,设置chrome浏览器无界面模式
 chrome_options=Options()
-chrome_options.add_argument('--headless')
+# 方式一：添加选项
+# chrome_options.add_argument('--headless')
+# 方式二：设置属性
+chrome_options.headless = True
 
 # 创建chrome无界面对象
 browser = webdriver.Chrome(options=chrome_options)
