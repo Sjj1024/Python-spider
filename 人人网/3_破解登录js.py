@@ -21,9 +21,13 @@ if __name__ == '__main__':
     big_js = session.get(big_url).content.decode()
     context.execute(big_js)
 
-    rsa_url = "http://s.xnimg.cn/a86836/wap/mobile/wechatLive/js/celllog.js"
+    rsa_url = "http://s.xnimg.cn/a85738/wap/mobile/wechatLive/js/RSA.js"
     rsa_js = session.get(rsa_url).content.decode()
     context.execute(rsa_js)
+
+    bar_url = "http://s.xnimg.cn/a85738/wap/mobile/wechatLive/js/Barrett.js"
+    bar_js = session.get(bar_url).content.decode()
+    context.execute(bar_js)
 
     # 登录地址和参数
     login_url = "http://activity.renren.com/livecell/ajax/clog"
@@ -44,3 +48,5 @@ if __name__ == '__main__':
                     t.rKey = n.rkey
     """
 
+    context.execute(code_js)
+    print(context.t)
