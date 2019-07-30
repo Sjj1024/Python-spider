@@ -25,6 +25,15 @@ if __name__ == '__main__':
     rsa_js = session.get(rsa_url).content.decode()
     context.execute(rsa_js)
 
+    # 登录地址和参数
+    login_url = "http://activity.renren.com/livecell/ajax/clog"
+    context.t = {
+        "phoneNum": "15670339119",
+        "password": "15670339119",
+        "c1": "-100",
+        "rKey": "",
+    }
+
     # 需要执行的js核心代码
     code_js = """
     t.password = t.password.split("").reverse().join(""),
@@ -34,3 +43,4 @@ if __name__ == '__main__':
                     t.password = r,
                     t.rKey = n.rkey
     """
+
