@@ -56,3 +56,8 @@ if __name__ == '__main__':
     res = session.post(login_url, data=context.t.to_dict())
     print(res.content.decode())
 
+    # 登录后获取个人主页
+    my_profile = "http://activity.renren.com/myprofile"
+    res = session.get(my_profile)
+    with open("my.html", "w") as f:
+        f.write(res.content.decode())
