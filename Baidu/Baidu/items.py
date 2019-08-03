@@ -18,3 +18,10 @@ class GuokrItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     name = scrapy.Field()
+    link = scrapy.Field()
+
+
+class GuokrdetailItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    answer = scrapy.Field()

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from Baidu.items import GuokrItem
+from Baidu.items import GuokrItem, GuokrdetailItem
+
 
 class GuokrSpider(scrapy.Spider):
     name = 'guokr'
@@ -14,7 +15,9 @@ class GuokrSpider(scrapy.Spider):
             item = GuokrItem()
             # print(i.xpath("./text()").extract_first())
             item["name"] = i.xpath("./text()").extract_first()
+            item["link"] = i.xpath("./@href").extract_first()
             yield item
+            yield scrapy.Request(url=item["link"], callback=self.detail_parse)
 
         # 翻页操作
         next_url = response.xpath('//a[text()="下一页"]/@href').extract_first()
@@ -23,3 +26,7 @@ class GuokrSpider(scrapy.Spider):
             print(22222222222222222222222)
             print(next_url)
             yield scrapy.Request(url=next_url, callback=self.parse)
+
+    def detail_parse(self, response):
+        item = GuokrdetailItem()
+        div_list = response.xpath('')
