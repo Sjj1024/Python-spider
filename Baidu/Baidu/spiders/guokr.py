@@ -29,4 +29,10 @@ class GuokrSpider(scrapy.Spider):
 
     def detail_parse(self, response):
         item = GuokrdetailItem()
-        div_list = response.xpath('')
+        div_list = response.xpath('//div[@id="answers"]/div[contains(@class,"answer gclear")]')
+        content_list = []
+        for div in div_list:
+            data_list = div.xpath('.//div[@class="answer-txt answerTxt gbbcode-content"]/p/text()').extract()
+            content_list.append(data_list)
+        item["answer"] = content_list
+        yield item

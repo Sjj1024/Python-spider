@@ -6,6 +6,8 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import json
 
+from Baidu.items import GuokrdetailItem
+
 
 class BaiduPipeline(object):
     def process_item(self, item, spider):
@@ -25,4 +27,18 @@ class GuokrPipeline(object):
         return item
 
     def close_spider(self, spider):
+        self.file.close()
+
+class GuokrDetailPipeline(object):
+    def open_spider(self,spider):
+        self.file = open('guokrdetail.json','w',encoding='utf-8')
+
+    def process_item(self, item, spider):
+        if isinstance(item,GuokrdetailItem):
+            print(item)
+            json_str = json.dumps(dict(item),ensure_ascii=False)
+            self.file.write(json_str+'\n')
+        return item
+
+    def close_spider(self,spider):
         self.file.close()
