@@ -8,4 +8,5 @@
 
 class BaiduPipeline(object):
     def process_item(self, item, spider):
-        return item
+        print(11111111111111111111111)
+        print(item)
