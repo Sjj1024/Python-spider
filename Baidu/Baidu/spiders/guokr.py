@@ -15,3 +15,11 @@ class GuokrSpider(scrapy.Spider):
             # print(i.xpath("./text()").extract_first())
             item["name"] = i.xpath("./text()").extract_first()
             yield item
+
+        # 翻页操作
+        next_url = response.xpath('//a[text()="下一页"]/@href').extract_first()
+        if next_url is not None:
+            next_url = "https://www.guokr.com" + next_url
+            print(22222222222222222222222)
+            print(next_url)
+            yield scrapy.Request(url=next_url, callback=self.parse)
