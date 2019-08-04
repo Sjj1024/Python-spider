@@ -6,7 +6,7 @@ header = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36",
     "Referer": "https://www.mzitu.com/197306/1"
 }
-ret = requests.get(url1, headers=header, verify=False)
+ret = requests.get(url1, headers=header)
 res_jpg = ret.content
 
 with open("06b01.jpg", "wb") as f:
