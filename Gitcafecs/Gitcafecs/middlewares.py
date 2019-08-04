@@ -8,6 +8,8 @@ import random
 
 from scrapy import signals
 
+from Gitcafecs.settings import USER_AGENT_LIST
+
 
 class GitcafecsSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -73,6 +75,7 @@ class GitcafecsDownloaderMiddleware(object):
         # Called for each request that goes through the downloader
         # middleware.
         random_user = random.choice(USER_AGENT_LIST)
+        request.headers["User-Agent"] = random_user
         # Must either:
         # - return None: continue processing this request
         # - or return a Response object
@@ -83,7 +86,8 @@ class GitcafecsDownloaderMiddleware(object):
 
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
-
+        print(3333333333333333333333333333)
+        print(request.headers["User-Agent"])
         # Must either;
         # - return a Response object
         # - return a Request object
