@@ -4,6 +4,7 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import random
 
 from scrapy import signals
 
@@ -71,7 +72,7 @@ class GitcafecsDownloaderMiddleware(object):
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
-
+        random_user = random.choice(USER_AGENT_LIST)
         # Must either:
         # - return None: continue processing this request
         # - or return a Response object
