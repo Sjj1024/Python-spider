@@ -2,14 +2,17 @@
 import scrapy
 
 from Aqi.items import AqiItem
+from scrapy_redis.spiders import RedisSpider
 
-
-class AqiSpider(scrapy.Spider):
-    name = 'aqi'
+class AqiSpider(RedisSpider):
+    name = 'aqi_redis'
     allowed_domains = ['aqistudy.cn']
     base_urls = 'https://www.aqistudy.cn/historydata/'
-    start_urls = [base_urls]
+    # start_urls = [base_urls]
+    # 生成redis_key
+    redis_key = "aqi"
 
+    # 解析第一层数据，城市名字
     def parse(self, response):
         city_name_list = response.xpath('//ul/div[2]/li/a/text()').extract()[4:5]
         city_link_list = response.xpath('//ul/div[2]/li/a/@href').extract()[4:5]
@@ -30,7 +33,6 @@ class AqiSpider(scrapy.Spider):
             month_url = self.base_urls + month_link
             yield scrapy.Request(month_url, callback=self.parse_day, meta={"aqi":item})
             print(item)
-
 
     # 解析第三层数据，真正数据
     def parse_day(self, response):

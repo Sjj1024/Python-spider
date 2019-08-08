@@ -4,9 +4,35 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-
+import scrapy
+import time
 from scrapy import signals
+from selenium import webdriver
 
+
+class AqiChromeMiddleware(object):
+    def process_request(self, request, spider):
+        url = request.url
+        # 开启selenium下载器
+        if url != "https://www.aqistudy.cn/historydata/":
+            # 创建浏览器对象
+            driver = webdriver.Chrome()
+            # 发送请求
+            driver.get(url)
+            time.sleep(2)
+            # 获取数据
+            data = driver.page_source
+            # 关闭浏览器
+            driver.close()
+
+            # 构建response对象
+            return scrapy.http.HtmlResponse(
+                url="",
+                status=200,
+                body=data.encode("utf-8"),
+                request=request,
+                encoding="utf-8"
+            )
 
 class AqiSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
