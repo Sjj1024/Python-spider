@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from copy import deepcopy
 
 from Jdtushu.items import JdtushuItem
 
@@ -24,7 +25,7 @@ class JdSpider(scrapy.Spider):
                 small_link = 'https:' + em.xpath('.//a/@href').extract_first()
                 # print(item)
                 # print(small_link)
-                yield scrapy.Request(url=small_link, callback=self.parse_book, meta={"book": item})
+                yield scrapy.Request(url=small_link, callback=self.parse_book, meta={"book": deepcopy(item)})
 
     def parse_book(self, response):
         # 接收上一层传递过来的数据
