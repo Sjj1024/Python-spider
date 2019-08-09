@@ -32,10 +32,14 @@ class JdSpider(scrapy.Spider):
         # 取出所有图书的链接
         book_link = response.xpath('//*[@id="plist"]/ul/li')
         for book in book_link:
-            item['book_response_url'] = book.url
-            item['book_img_url'] = book.xpath('./div/div[1]/a/img/@src').extract_first()
-            item['book_name'] = book.xpath('./div/div[3]/a/em/text()').extract_first()
+            item['book_response_url'] = response.url
+            # 因为图片有时候使用的是惰性加载，这个惰性加载怎么发现的？
+            book_img_url = book.xpath('./div/div[1]/a/img/@data-lazy-img').extract_first()
+            if book_img_url == None:
+                book_img_url = book.xpath('./div/div[1]/a/img/@src').extract_first()
+            item['book_img_url'] = 'https:' + book_img_url
+            item['book_name'] = book.xpath('./div/div[3]/a/em/text()').extract_first().strip()
             item['book_author'] = book.xpath('./div/div[4]/span[1]/span/a/text()').extract_first()
-            item['book_store'] = book.xpath('./div/div[4]/span[2]/a').extract_first()
-            item['book_time'] = book.xpath('./div/div[4]/span[3]').extract_first()
+            item['book_store'] = book.xpath('./div/div[4]/span[2]/a/text()').extract_first()
+            item['book_time'] = book.xpath('./div/div[4]/span[3]/text()').extract_first().strip()
             print(item)
