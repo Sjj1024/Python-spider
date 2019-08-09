@@ -11,4 +11,11 @@ import scrapy
 class JdtushuItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    big_name = scrapy.Field()
+    small_name = scrapy.Field()
+    book_response_url = scrapy.Field()
+    book_img_url = scrapy.Field()
+    book_name = scrapy.Field()
+    book_author = scrapy.Field()
+    book_store = scrapy.Field()
+    book_time = scrapy.Field()
