@@ -10,12 +10,16 @@ import scrapy
 
 class JdphoneItem(scrapy.Item):
     # define the fields for your item here like:
+    goodid = scrapy.Field() # 商品id
     brand = scrapy.Field()  # 手机品牌
     name = scrapy.Field()  # 手机名字
-    image = scrapy.Field()  #手机图片
-    uptime = scrapy.Field()   #上市时间
+    image = scrapy.Field()  # 手机图片
+    year_time = scrapy.Field()   # 上市时间年份
+    month_time = scrapy.Field()  # 上市时间月份
     price = scrapy.Field()  # 价格
-    comrate = scrapy.Field()    #好评率
+    goodrate = scrapy.Field()  # 好评率
+    link = scrapy.Field()   # 商品链接
+    CommentCount = scrapy.Field()  # 商品总评价
 
 
 
