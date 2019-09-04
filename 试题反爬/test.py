@@ -1,4 +1,12 @@
-fruits = ['app le', 'orange', 'peach']
-str = "I want some apples"
-if all(str not in element.upper().replace(" ", "") and element.upper().replace(" ", "") not in str for element in fruits):
-  print("string contains some fruits")
+from openpyxl import Workbook,load_workbook
+
+wb = load_workbook("sample.xlsx")
+
+ws = wb.active
+
+for i in ws.rows:
+  for j in i:
+    print(j.value)
+
+
+
