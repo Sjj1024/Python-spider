@@ -20,6 +20,11 @@ class JdphoneItem(scrapy.Item):
     goodrate = scrapy.Field()  # 好评率
     link = scrapy.Field()   # 商品链接
     CommentCount = scrapy.Field()  # 商品总评价
+    # 拓展信息
+    weight = scrapy.Field() # 机身重量
+    length = scrapy.Field() # 机身长度
+    width = scrapy.Field()  # 机身宽度
+    inch = scrapy.Field()   # 主屏幕尺寸
 
 
 

@@ -73,6 +73,15 @@ class JdphoneSpider(scrapy.Spider):
         month_time = response.xpath('//dt[text()="上市月份"]/following-sibling::dd/text()').get()
         item["year_time"] = year_time
         item["month_time"] = month_time
+        # 提取手机重量、长款，屏幕尺寸等信息
+        length = response.xpath('//dt[text()="机身长度（mm）"]/following-sibling::dd[1]/text()').get()
+        item["length"] = length
+        width = response.xpath('//dt[text()="机身宽度（mm）"]/following-sibling::dd[1]/text()').get()
+        item["width"] = width
+        weight = response.xpath('//dt[text()="机身重量（g）"]/following-sibling::dd[1]/text()').get()
+        item["weight"] = weight
+        inch = response.xpath('//dt[text()="主屏幕尺寸（英寸）"]/following-sibling::dd[1]/text()').get()
+        item["inch"] = inch
         # 构造商品价格查询接口
         price_url = f"https://c0.3.cn/stock?skuId={item['goodid']}&area=2_2825_51931_0&cat=9987,653,655"
         yield scrapy.Request(price_url, callback=self.parse_price, meta={"item": deepcopy(item)})

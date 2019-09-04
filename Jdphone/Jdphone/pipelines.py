@@ -13,11 +13,12 @@ class JdphonePipeline(object):
             self.name_list = []
             self.f = openpyxl.Workbook()
             self.sheet1 = self.f.create_sheet("手机信息")
-            self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接"})
+            self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
+                                "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
 
     def close_spider(self, spider):  # 在爬虫关闭的时候仅执行一次
         if spider.name == 'jdphone':
-            self.f.save("手机6.xlsx")
+            self.f.save("手机7.xlsx")
 
     def process_item(self, item, spider):
         print("管道开始执行了000000000000000000000000000000000000000000")
@@ -36,6 +37,8 @@ class JdphonePipeline(object):
                         self.sheet1.append(
                             {"A": item['brand'], "B": item['name'], "C": item['price'],
                              "D": item['year_time'] + item['month_time'],
-                             "E": item['goodrate'], "F": item['image'], "G": item['link']})
+                             "E": item['goodrate'], "F": item['image'], "G": item['link'], "H": item["length"],
+                             "I": item["width"],
+                             "J": item["weight"], "K": item["inch"]})
                         self.name_list.append(item['name'].upper().replace(" ", ""))
         print("管道执行结束=============================================")
