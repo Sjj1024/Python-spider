@@ -21,7 +21,7 @@ class JdphonePipeline(object):
             self.f.save("手机7.xlsx")
 
     def process_item(self, item, spider):
-        print("管道开始执行了000000000000000000000000000000000000000000")
+        print("管道开始执行了0000000000000000000000000000000000000000")
         # 过滤出2019年才发布的手机
         if item['year_time'] and item['year_time'][:4:] == "2019" and item['month_time'] != '以官网信息为准':
             # 再过滤出有名字的手机
