@@ -1,17 +1,9 @@
-from docx import *
-from docx.shared import Inches
-
-# 创建一个doc文档
-file = Document()
-
-# 添加一个标题，等级为2,也就是2级标题
-file.add_heading("段落标题", level=2)
-
-# 添加段落内容
-para = file.add_paragraph("我好喜欢你")
-
-# 添加图片，图片是当前文件夹下的 img.png 图片
-file.add_picture('06b01.jpg',width=Inches(4.0))
-
-# 保存文件
-file.save("test.docx")
+import pygal
+line_chart = pygal.Line()
+line_chart.title = 'Browser usage evolution (in %)'
+line_chart.x_labels = map(str, range(2002, 2013))  # 横坐标的值
+line_chart.add('Firefox', [None, None, 0, 16.6, 25, 31, 36.4, 45.5, 46.3, 42.8, 37.1])
+line_chart.add('Chrome', [None, None, None, None, None, None, 0, 3.9, 10.8, 23.8, 35.3])
+line_chart.add('IE',  [85.8, 84.6, 84.7, 74.5, 66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
+line_chart.add('Others', [14.2, 15.4, 15.3, 8.9, 9, 10.4, 8.9, 5.8, 6.7, 6.8, 7.5])
+line_chart.render_to_file('Hello_line_chart.svg')
