@@ -17,7 +17,7 @@ class JdphonePipeline(object):
             self.sheet1 = self.f.create_sheet("手机信息1")
             self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
-            # 按照时间过滤后的信息表格
+            # 2按照时间过滤后的信息表格
             self.five_list = []  # 保存价格在500以下的手机
             self.onefive_list = []  # 保存价格在1500以下的手机
             self.twofive_list = []  # 保存价格在2500以下的手机
@@ -27,6 +27,7 @@ class JdphonePipeline(object):
             self.sheet2 = self.f2.create_sheet("手机信息2")
             self.sheet2.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
+            # 3按照手机品牌分类
 
     def close_spider(self, spider):  # 在爬虫关闭的时候仅执行一次
         if spider.name == 'jdphone':
