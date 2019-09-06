@@ -19,7 +19,8 @@ class JdphonePipeline(object):
 
     def close_spider(self, spider):  # 在爬虫关闭的时候仅执行一次
         if spider.name == 'jdphone':
-            self.f.save("手机详情1.xlsx")
+            self.f.save("2019手机详情1.xlsx")
+
 
     def process_item(self, item, spider):
         print("管道开始执行了0000000000000000000000000000000000000000")
@@ -45,4 +46,7 @@ class JdphonePipeline(object):
                         self.name_list.append(item['name'].upper().replace(" ", ""))
                         # 将过滤后的手机保存到字典列表中，
                         self.filted_list.append(item)
+        # 按照手机价格进行汇聚，然后按照时间进行排序
+
+        # 遍历出手机信，按照价格分别存储到不同的列表中
         print("管道执行结束=============================================")
