@@ -14,7 +14,7 @@ class JdphonePipeline(object):
             self.name_list = []  # 手机去重列表
             # 没有过滤的2019手机信息表格
             self.f = openpyxl.Workbook()
-            self.sheet1 = self.f.create_sheet("手机信息")
+            self.sheet1 = self.f.create_sheet("手机信息1")
             self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
             # 按照时间过滤后的信息表格
@@ -24,7 +24,7 @@ class JdphonePipeline(object):
             self.thrfive_list = []  # 保存价格在3500以下的手机
             self.forfive_list = []  # 保存价格在3500以上的手机
             self.f2 = openpyxl.Workbook()
-            self.sheet2 = self.f2.create_sheet("手机信息")
+            self.sheet2 = self.f2.create_sheet("手机信息2")
             self.sheet2.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
 
@@ -43,6 +43,8 @@ class JdphonePipeline(object):
             # 遍历排序后的列表，然后存储到表格中
             for onelist in self.all_list:
                 # 取出一个排序好的列表
+                self.sheet2.append({"A": "                              "})
+                self.sheet2.append({"A": "以下是价格在500到500的手机信息："})
                 for item in onelist:
                     # 将单个手机字典对象添加到表格中
                     self.sheet2.append(

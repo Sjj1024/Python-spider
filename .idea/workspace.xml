@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d849e240-ec43-452e-b755-9f505a665be5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Jdphone/手机.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Jdphone/手机2.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Jdphone/手机3.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Jdphone/手机6.xlsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py" afterPath="$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/试题反爬/test.py" afterPath="$PROJECT_DIR$/试题反爬/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,8 +38,18 @@
       <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+            <state relative-caret-position="234">
+              <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="8.excel表格.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/试题反爬/8.excel表格.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,6 +179,11 @@
               <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
               <item name="Jdphone" type="462c0819:PsiDirectoryNode" />
               <item name="Jdphone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-spider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
+              <item name="试题反爬" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -549,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567761635143</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update">
+      <created>1567764262212</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1567764262212</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -848,13 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/试题反爬/8.excel表格.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Envs/py3_spider/Lib/site-packages/openpyxl/workbook/workbook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -913,10 +923,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/试题反爬/8.excel表格.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+        <state relative-caret-position="234">
+          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
           <folding />
         </state>
       </provider>
