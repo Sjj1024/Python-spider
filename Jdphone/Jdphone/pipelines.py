@@ -34,10 +34,10 @@ class JdphonePipeline(object):
             self.f.save("2019手机详情1.xlsx")
             # 2.1然后按照时间对手机进行排序
             self.five_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
-            self.onefive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
-            self.twofive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
-            self.thrfive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
-            self.forfive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
+            self.onefive_list = sorted(self.onefive_list, key=lambda x: int(x['month_time'][:1:]))
+            self.twofive_list = sorted(self.twofive_list, key=lambda x: int(x['month_time'][:1:]))
+            self.thrfive_list = sorted(self.thrfive_list, key=lambda x: int(x['month_time'][:1:]))
+            self.forfive_list = sorted(self.forfive_list, key=lambda x: int(x['month_time'][:1:]))
             self.all_list = [self.five_list, self.onefive_list, self.twofive_list, self.thrfive_list,
                              self.forfive_list]  # 用来存储排序后的手机列表
             # 遍历排序后的列表，然后存储到表格中
