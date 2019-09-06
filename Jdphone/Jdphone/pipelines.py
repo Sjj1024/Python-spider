@@ -10,6 +10,7 @@ import openpyxl
 class JdphonePipeline(object):
     def open_spider(self, spider):  # 在爬虫开启的时候仅执行一次
         if spider.name == 'jdphone':
+            self.filted_list = []  # 过滤出来的2019手机字典列表
             self.name_list = []  # 手机去重列表
             # 没有过滤的2019手机信息表格
             self.f = openpyxl.Workbook()
@@ -17,23 +18,40 @@ class JdphonePipeline(object):
             self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
             # 按照时间过滤后的信息表格
-            self.filted_list = []  # 过滤出来的2019手机字典列表
             self.five_list = []  # 保存价格在500以下的手机
             self.onefive_list = []  # 保存价格在1500以下的手机
             self.twofive_list = []  # 保存价格在2500以下的手机
             self.thrfive_list = []  # 保存价格在3500以下的手机
             self.forfive_list = []  # 保存价格在3500以上的手机
-            self.f1 = openpyxl.Workbook()
-            self.sheet1 = self.f1.create_sheet("手机信息")
-            self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
+            self.f2 = openpyxl.Workbook()
+            self.sheet2 = self.f2.create_sheet("手机信息")
+            self.sheet2.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
 
     def close_spider(self, spider):  # 在爬虫关闭的时候仅执行一次
         if spider.name == 'jdphone':
             # 保存2019没有过滤的手机列表到表格中
             self.f.save("2019手机详情1.xlsx")
-            # 遍历手机字典列表然后存储到不同价格区间的列表中
-
+            # 2.1然后按照时间对手机进行排序
+            self.five_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
+            self.onefive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
+            self.twofive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
+            self.thrfive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
+            self.forfive_list = sorted(self.five_list, key=lambda x: int(x['month_time'][:1:]))
+            self.all_list = [self.five_list, self.onefive_list, self.twofive_list, self.thrfive_list,
+                             self.forfive_list]  # 用来存储排序后的手机列表
+            # 遍历排序后的列表，然后存储到表格中
+            for onelist in self.all_list:
+                # 取出一个排序好的列表
+                for item in onelist:
+                    # 将单个手机字典对象添加到表格中
+                    self.sheet2.append(
+                        {"A": item['brand'], "B": item['name'], "C": item['price'],
+                         "D": item['year_time'] + item['month_time'],
+                         "E": item['goodrate'], "F": item['image'], "G": item['link'], "H": item["length"],
+                         "I": item["width"],
+                         "J": item["weight"], "K": item["inch"]})
+            self.f2.save("2019手机详情2.xlsx")
 
     def process_item(self, item, spider):
         print("管道开始执行了0000000000000000000000000000000000000000")
@@ -59,9 +77,16 @@ class JdphonePipeline(object):
                         self.name_list.append(item['name'].upper().replace(" ", ""))
                         # 将过滤后的手机保存到字典列表中，
                         self.filted_list.append(item)
-                        # 2.按照手机价格进行汇聚，然后按照时间进行排序
-
-                        # 遍历出手机信，按照价格分别存储到不同的列表中
-
+                        # 2.按照手机价格进行汇聚，
+                        if float(item['price']) <= 500:
+                            self.five_list.append(item)
+                        elif 500 < float(item['price']) <= 1500:
+                            self.onefive_list.append(item)
+                        elif 1500 < float(item['price']) <= 2500:
+                            self.twofive_list.append(item)
+                        elif 2500 < float(item['price']) <= 3500:
+                            self.thrfive_list.append(item)
+                        elif 3500 < float(item['price']):
+                            self.forfive_list.append(item)
 
         print("管道执行结束=============================================")
