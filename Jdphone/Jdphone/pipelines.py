@@ -12,15 +12,20 @@ class JdphonePipeline(object):
         if spider.name == 'jdphone':
             self.name_list = []  # 手机去重列表
             self.filted_list = []  # 过滤出来的2019手机字典列表
+            # 没有过滤的2019手机信息表格
             self.f = openpyxl.Workbook()
             self.sheet1 = self.f.create_sheet("手机信息")
+            self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
+                                "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
+            # 按照时间过滤后的信息表格
+            self.f1 = openpyxl.Workbook()
+            self.sheet1 = self.f1.create_sheet("手机信息")
             self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
 
     def close_spider(self, spider):  # 在爬虫关闭的时候仅执行一次
         if spider.name == 'jdphone':
             self.f.save("2019手机详情1.xlsx")
-
 
     def process_item(self, item, spider):
         print("管道开始执行了0000000000000000000000000000000000000000")
