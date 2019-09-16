@@ -64,7 +64,7 @@ class JdphonePipeline(object):
             # 按照手机品牌进行分类
             # 按照时间先进行排序处理
             for name in self.filter_brand:
-                self.filter_brand[name].sort(key=lambda x:int(x['month_time'][:1:]))
+                self.filter_brand[name].sort(key=lambda x: int(x['month_time'][:1:]))
 
             # 然后保存到表格中
             for name in self.filter_brand:
@@ -81,7 +81,6 @@ class JdphonePipeline(object):
                          "I": item["width"],
                          "J": item["weight"], "K": item["inch"]})
             self.f3.save("2019手机品牌分类3.xlsx")
-
 
     def process_item(self, item, spider):
         print("管道开始执行了00000000000000000000000000000000000000")
