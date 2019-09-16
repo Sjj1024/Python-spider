@@ -28,7 +28,7 @@ class JdphonePipeline(object):
             self.sheet2.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
             # 3按照手机品牌分类
-            self.filter_name = {}  # 创建一个字典，保存手机品牌对应的手机列表
+            self.filter_brand = {}  # 创建一个字典，保存手机品牌对应的手机列表
             self.f3 = openpyxl.Workbook()
             self.sheet3 = self.f3.create_sheet("手机信息3")
             self.sheet3.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
@@ -60,8 +60,27 @@ class JdphonePipeline(object):
                          "I": item["width"],
                          "J": item["weight"], "K": item["inch"]})
             self.f2.save("2019手机价格排序2.xlsx")
-            # 按照手机新品分类
+
+            # 按照手机品牌进行分类
+            # 按照时间先进行排序处理
+
+
+            for name in self.filter_brand:
+                # 遍历手机品牌中的每一个商品
+                # 取出一个排序好的列表
+                self.sheet3.append({"A": "                              "})
+                self.sheet3.append({"A": f"以下是{name}手机产品列表"})
+                for item in self.filter_brand[name]:
+                    # 将单个手机字典对象添加到表格中
+                    self.sheet3.append(
+                        {"A": item['brand'], "B": item['name'], "C": item['price'],
+                         "D": item['year_time'] + item['month_time'],
+                         "E": item['goodrate'], "F": item['image'], "G": item['link'], "H": item["length"],
+                         "I": item["width"],
+                         "J": item["weight"], "K": item["inch"]})
+
             self.f3.save("2019手机品牌分类3.xlsx")
+
 
     def process_item(self, item, spider):
         print("管道开始执行了00000000000000000000000000000000000000")
@@ -100,8 +119,8 @@ class JdphonePipeline(object):
                             self.forfive_list.append(item)
 
                         # 判断手机品牌已存在，将手机品牌名字保存到列表字典中
-                        if item["name"] in self.filter_name:
-                            self.filter_name[item["name"]].append(item)
+                        if item["brand"] in self.filter_brand:
+                            self.filter_brand[item["brand"]].append(item)
                         else:
-                            self.filter_name[item["name"]] = [item]
+                            self.filter_brand[item["brand"]] = [item]
         print("管道执行结束=============================================")
