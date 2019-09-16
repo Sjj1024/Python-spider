@@ -28,6 +28,7 @@ class JdphonePipeline(object):
             self.sheet2.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
                                 "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
             # 3按照手机品牌分类
+            self.filter_name = {}  # 创建一个字典，保存手机品牌对应的手机列表
             self.f3 = openpyxl.Workbook()
             self.sheet3 = self.f3.create_sheet("手机信息3")
             self.sheet3.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
@@ -60,7 +61,6 @@ class JdphonePipeline(object):
                          "J": item["weight"], "K": item["inch"]})
             self.f2.save("2019手机价格排序2.xlsx")
             # 按照手机新品分类
-
             self.f3.save("2019手机品牌分类3.xlsx")
 
     def process_item(self, item, spider):
@@ -99,4 +99,9 @@ class JdphonePipeline(object):
                         elif 3500 < float(item['price']):
                             self.forfive_list.append(item)
 
+                        # 判断手机品牌已存在，将手机品牌名字保存到列表字典中
+                        if item["name"] in self.filter_name:
+                            self.filter_name[item["name"]].append(item)
+                        else:
+                            self.filter_name[item["name"]] = [item]
         print("管道执行结束=============================================")

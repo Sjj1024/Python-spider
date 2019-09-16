@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d849e240-ec43-452e-b755-9f505a665be5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/试题反爬/11-taobaonv.py" afterPath="$PROJECT_DIR$/试题反爬/11-taobaonv.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py" afterPath="$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/试题反爬/test.py" afterPath="$PROJECT_DIR$/试题反爬/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +20,8 @@
     <SUITE FILE_PATH="coverage/Python_spider$ip.coverage" NAME="测试ip封锁 Coverage Results" MODIFIED="1567245930288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Jdtushu" />
     <SUITE FILE_PATH="coverage/Python_spider$7_.coverage" NAME="7_磁力链接下载 Coverage Results" MODIFIED="1565342572616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题反爬" />
     <SUITE FILE_PATH="coverage/Python_spider$10_svg.coverage" NAME="10-生成svg图 Coverage Results" MODIFIED="1567580662691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题反爬" />
-    <SUITE FILE_PATH="coverage/Python_spider$test.coverage" NAME="test Coverage Results" MODIFIED="1567768658620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题反爬" />
     <SUITE FILE_PATH="coverage/Python_spider$11_taobaonv.coverage" NAME="11-taobaonv Coverage Results" MODIFIED="1568519266254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题反爬" />
+    <SUITE FILE_PATH="coverage/Python_spider$test.coverage" NAME="test Coverage Results" MODIFIED="1568637760389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题反爬" />
     <SUITE FILE_PATH="coverage/Python_spider$8_excel.coverage" NAME="8.excel表格 Coverage Results" MODIFIED="1567386167843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题反爬" />
     <SUITE FILE_PATH="coverage/Python_spider$9_doc.coverage" NAME="9-操作doc文档 Coverage Results" MODIFIED="1567577439401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题反爬" />
   </component>
@@ -29,18 +30,28 @@
       <file leaf-file-name="jdphone.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/spiders/jdphone.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
+            <state relative-caret-position="26">
               <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="11-taobaonv.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/试题反爬/11-taobaonv.py">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="101" column="36" lean-forward="false" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/试题反爬/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -107,9 +118,9 @@
         <option value="$PROJECT_DIR$/试题反爬/9-操作doc文档.py" />
         <option value="$PROJECT_DIR$/试题反爬/10-生成svg图.py" />
         <option value="$PROJECT_DIR$/Jdphone/Jdphone/spiders/jdphone.py" />
+        <option value="$PROJECT_DIR$/试题反爬/11-taobaonv.py" />
         <option value="$PROJECT_DIR$/试题反爬/test.py" />
         <option value="$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py" />
-        <option value="$PROJECT_DIR$/试题反爬/11-taobaonv.py" />
       </list>
     </option>
   </component>
@@ -143,7 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,13 +165,31 @@
             <path>
               <item name="Python-spider" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
+              <item name="Jdphone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-spider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
+              <item name="Jdphone" type="462c0819:PsiDirectoryNode" />
+              <item name="Jdphone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-spider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
+              <item name="Jdphone" type="462c0819:PsiDirectoryNode" />
+              <item name="Jdphone" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-spider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
               <item name="试题反爬" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -191,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.11-taobaonv">
+  <component name="RunManager" selected="Python.test">
     <configuration name="10-生成svg图" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,8 +320,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.11-taobaonv" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.11-taobaonv" />
         <item index="2" class="java.lang.String" itemvalue="Python.10-生成svg图" />
         <item index="3" class="java.lang.String" itemvalue="Python.9-操作doc文档" />
         <item index="4" class="java.lang.String" itemvalue="Python.8.excel表格" />
@@ -572,14 +601,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568385293653</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="update">
+      <created>1568519297344</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1568519297344</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16187595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16414523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -633,7 +669,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -810,20 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/试题反爬/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="66" column="50" lean-forward="false" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/京东手机/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -912,7 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="252" column="10" lean-forward="false" selection-start-line="252" selection-start-column="10" selection-end-line="252" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,22 +976,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/试题反爬/11-taobaonv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/spiders/jdphone.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
+        <state relative-caret-position="26">
           <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/试题反爬/11-taobaonv.py">
+    <entry file="file://$PROJECT_DIR$/试题反爬/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="104">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="101" column="36" lean-forward="false" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
           <folding />
         </state>
       </provider>
