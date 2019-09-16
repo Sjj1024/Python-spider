@@ -63,8 +63,10 @@ class JdphonePipeline(object):
 
             # 按照手机品牌进行分类
             # 按照时间先进行排序处理
+            for name in self.filter_brand:
+                name.sort(key=lambda x:int(x['month_time'][:1:]))
 
-
+            # 然后保存到表格中
             for name in self.filter_brand:
                 # 遍历手机品牌中的每一个商品
                 # 取出一个排序好的列表
