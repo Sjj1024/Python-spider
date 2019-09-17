@@ -13,7 +13,7 @@ class JdphonePipeline(object):
             self.filted_list = []  # 过滤出来的2019手机字典列表
             self.name_list = []  # 手机去重列表
             self.excel_dict = {"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
-                               "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"}
+                               "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸", "L": "总评论数"}
             # 没有过滤的2019手机信息表格
             self.f = openpyxl.Workbook()
             self.sheet1 = self.f.create_sheet("手机信息1")
@@ -57,7 +57,7 @@ class JdphonePipeline(object):
                          "D": item['year_time'] + item['month_time'],
                          "E": item['goodrate'], "F": item['image'], "G": item['link'], "H": item["length"],
                          "I": item["width"],
-                         "J": item["weight"], "K": item["inch"]})
+                         "J": item["weight"], "K": item["inch"], "L": item["CommentCount"]})
             self.f2.save("2019手机价格排序2.xlsx")
 
             # 按照手机品牌进行分类
@@ -78,7 +78,7 @@ class JdphonePipeline(object):
                          "D": item['year_time'] + item['month_time'],
                          "E": item['goodrate'], "F": item['image'], "G": item['link'], "H": item["length"],
                          "I": item["width"],
-                         "J": item["weight"], "K": item["inch"]})
+                         "J": item["weight"], "K": item["inch"], "L": item["CommentCount"]})
             self.f3.save("2019手机品牌分类3.xlsx")
 
     def process_item(self, item, spider):
@@ -101,7 +101,7 @@ class JdphonePipeline(object):
                              "D": item['year_time'] + item['month_time'],
                              "E": item['goodrate'], "F": item['image'], "G": item['link'], "H": item["length"],
                              "I": item["width"],
-                             "J": item["weight"], "K": item["inch"]})
+                             "J": item["weight"], "K": item["inch"], "L": item["CommentCount"]})
                         self.name_list.append(item['name'].upper().replace(" ", ""))
                         # 将过滤后的手机保存到字典列表中，
                         self.filted_list.append(item)
