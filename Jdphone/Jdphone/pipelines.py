@@ -17,8 +17,7 @@ class JdphonePipeline(object):
             # 没有过滤的2019手机信息表格
             self.f = openpyxl.Workbook()
             self.sheet1 = self.f.create_sheet("手机信息1")
-            self.sheet1.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
-                                "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
+            self.sheet1.append(self.excel_dict)
             # 2按照时间过滤后的信息表格
             self.five_list = []  # 保存价格在500以下的手机
             self.onefive_list = []  # 保存价格在1500以下的手机
@@ -27,14 +26,12 @@ class JdphonePipeline(object):
             self.forfive_list = []  # 保存价格在3500以上的手机
             self.f2 = openpyxl.Workbook()
             self.sheet2 = self.f2.create_sheet("手机信息2")
-            self.sheet2.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
-                                "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
+            self.sheet2.append(self.excel_dict)
             # 3按照手机品牌分类
             self.filter_brand = {}  # 创建一个字典，保存手机品牌对应的手机列表
             self.f3 = openpyxl.Workbook()
             self.sheet3 = self.f3.create_sheet("手机信息3")
-            self.sheet3.append({"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
-                                "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"})
+            self.sheet3.append(self.excel_dict)
 
     def close_spider(self, spider):  # 在爬虫关闭的时候仅执行一次
         if spider.name == 'jdphone':
