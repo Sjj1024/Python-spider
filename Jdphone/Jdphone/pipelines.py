@@ -12,6 +12,8 @@ class JdphonePipeline(object):
         if spider.name == 'jdphone':
             self.filted_list = []  # 过滤出来的2019手机字典列表
             self.name_list = []  # 手机去重列表
+            self.excel_dict = {"A": "品牌", "B": "型号", "C": "价格", "D": "上市时间", "E": "好评率", "F": "图片", "G": "详情链接",
+                               "H": "机身长度", "I": "机身宽度", "J": "机身重量", "K": "屏幕尺寸"}
             # 没有过滤的2019手机信息表格
             self.f = openpyxl.Workbook()
             self.sheet1 = self.f.create_sheet("手机信息1")
