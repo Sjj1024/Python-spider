@@ -18,3 +18,4 @@
 ('https://www.guokr.com/question/112650/', '中国2185是什么情况？')
 ('https://www.guokr.com/question/642541/', '13亿分贝是个什么概念？ 能量有多强？')
 ('https://www.guokr.com/question/569351/', '可以以西瓜为主食生活吗？')
+('http://www.guokr.com/question/580359/', '请问什么叫Orch-OR，最近说已经被证明是怎么回事？为什么说Anirban Bandyopadhyay证明了\u200bOrch-OR？Orch-OR的前景怎样？懂量子力学的大神请进。')

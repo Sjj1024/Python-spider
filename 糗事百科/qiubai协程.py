@@ -5,7 +5,6 @@ from gevent.pool import Pool
 import requests
 import time
 from lxml import etree
-# from multiprocessing.dummy import Pool
 from queue import Queue
 
 
