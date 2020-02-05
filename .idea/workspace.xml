@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d849e240-ec43-452e-b755-9f505a665be5" name="Default" comment="update">
+    <list default="true" id="d849e240-ec43-452e-b755-9f505a665be5" name="Default" comment="下载图片多线程">
+      <change afterPath="$PROJECT_DIR$/1024文章/评论文章/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/91爬虫/get_91zhi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/91爬虫/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/妹子图片/24fa妹子/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/妹子图片/24fa妹子/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1024文章/get_dizhi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="546">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -41,34 +43,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1024文章/搜索文章/search_ui.py">
+        <entry file="file://$PROJECT_DIR$/91爬虫/get_91zhi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1638">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="52">
+              <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#11#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1024文章/搜索文章/search_u2.py">
+        <entry file="file://$PROJECT_DIR$/91爬虫/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="104">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1024文章/评论文章/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+            <state relative-caret-position="129">
+              <caret line="85" column="35" selection-end-line="100" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/q队列1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -79,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/down_img.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state>
+              <caret selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -140,6 +160,8 @@
       <find>&quot;version&quot;: &quot;1.0&quot;,</find>
       <find>../../upload/2020-01/20012910476116.jpg</find>
       <find>../../upload/2020-01/20012910471211.jpg</find>
+      <find>首页</find>
+      <find>自拍论坛</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,11 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Aqi/Aqi/spiders/aqi_redis.py" />
-        <option value="$PROJECT_DIR$/Aqi/Aqi/spiders/1.html" />
-        <option value="$PROJECT_DIR$/Aqi/Aqi/spiders/test.py" />
-        <option value="$PROJECT_DIR$/Aqi/Aqi/spiders/aqi.py" />
-        <option value="$PROJECT_DIR$/Aqi/Aqi/spiders/aqi_crawlredis.py" />
         <option value="$PROJECT_DIR$/Jdtushu/Jdtushu/items.py" />
         <option value="$PROJECT_DIR$/试题反爬/7_磁力链接下载.py" />
         <option value="$PROJECT_DIR$/scrapy_plus/http/request.py" />
@@ -199,6 +216,11 @@
         <option value="$PROJECT_DIR$/试题/用request下载图片.py" />
         <option value="$PROJECT_DIR$/妹子图片/24fa妹子/down_img.py" />
         <option value="$PROJECT_DIR$/妹子图片/24fa妹子/test.py" />
+        <option value="$PROJECT_DIR$/妹子图片/24fa妹子/q队列1.py" />
+        <option value="$PROJECT_DIR$/91爬虫/get.py" />
+        <option value="$PROJECT_DIR$/91爬虫/test.py" />
+        <option value="$PROJECT_DIR$/91爬虫/get_91zhi.py" />
+        <option value="$PROJECT_DIR$/1024文章/评论文章/test.py" />
       </list>
     </option>
   </component>
@@ -226,13 +248,13 @@
             <path>
               <item name="Python-spider" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
-              <item name="妹子图片" type="462c0819:PsiDirectoryNode" />
+              <item name="1024文章" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Python-spider" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python-spider" type="462c0819:PsiDirectoryNode" />
-              <item name="妹子图片" type="462c0819:PsiDirectoryNode" />
-              <item name="24fa妹子" type="462c0819:PsiDirectoryNode" />
+              <item name="1024文章" type="462c0819:PsiDirectoryNode" />
+              <item name="评论文章" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,8 +293,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test (1)">
+    <configuration name="get_91zhi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-spider" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -280,12 +302,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1024文章/搜索文章" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/91爬虫" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1024文章/搜索文章/config.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/91爬虫/get_91zhi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -294,7 +316,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="down_img" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="get_dizhi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-spider" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -302,12 +324,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/妹子图片/24fa妹子" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1024文章" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/妹子图片/24fa妹子/down_img.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1024文章/get_dizhi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -338,7 +360,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="search_ui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-spider" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -346,12 +368,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1024文章/搜索文章" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1024文章/评论文章" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1024文章/搜索文章/search_ui.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1024文章/评论文章/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -383,19 +405,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.search_ui" />
       <item itemvalue="Python.search_u2" />
-      <item itemvalue="Python.config" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.down_img" />
+      <item itemvalue="Python.get_dizhi" />
+      <item itemvalue="Python.get_91zhi" />
+      <item itemvalue="Python.test (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.get_91zhi" />
+        <item itemvalue="Python.get_dizhi" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.search_u2" />
-        <item itemvalue="Python.down_img" />
-        <item itemvalue="Python.config" />
-        <item itemvalue="Python.search_ui" />
       </list>
     </recent_temporary>
   </component>
@@ -419,21 +441,7 @@
       <workItem from="1580642159900" duration="599000" />
       <workItem from="1580649130239" duration="20908000" />
       <workItem from="1580796570206" duration="24245000" />
-      <workItem from="1580870860115" duration="1474000" />
-    </task>
-    <task id="LOCAL-00002" summary="update">
-      <created>1564928225000</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1564928225000</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <created>1564928363474</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1564928363474</updated>
+      <workItem from="1580870860115" duration="9743000" />
     </task>
     <task id="LOCAL-00004" summary="update">
       <created>1564928407857</created>
@@ -764,21 +772,36 @@
       <option name="project" value="LOCAL" />
       <updated>1580827711622</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="下载图片多线程">
+      <created>1580872645560</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1580872645561</updated>
+    </task>
+    <task id="LOCAL-00052" summary="下载图片多线程">
+      <created>1580874980278</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1580874980278</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77217000" />
+    <option name="totallyTimeSpent" value="85486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21709532" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1172466" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39508197" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47213113" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2852459" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -826,7 +849,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="下载图片多线程" />
+    <option name="LAST_COMMIT_MESSAGE" value="下载图片多线程" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_spider$1_.coverage" NAME="1_发现问答 Coverage Results" MODIFIED="1578147535400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/果壳网/果壳问答" />
@@ -835,42 +859,19 @@
     <SUITE FILE_PATH="coverage/Python_spider$search_file.coverage" NAME="search_file Coverage Results" MODIFIED="1580801030743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章" />
     <SUITE FILE_PATH="coverage/Python_spider$search.coverage" NAME="search Coverage Results" MODIFIED="1580722187060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章/搜索文章" />
     <SUITE FILE_PATH="coverage/Python_spider$test.coverage" NAME="test Coverage Results" MODIFIED="1580872558850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/妹子图片/24fa妹子" />
+    <SUITE FILE_PATH="coverage/Python_spider$get_91zhi.coverage" NAME="get_91zhi Coverage Results" MODIFIED="1580889913012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/91爬虫" />
     <SUITE FILE_PATH="coverage/Python_spider$1_ip.coverage" NAME="1-爬取西拉ip Coverage Results" MODIFIED="1580649176876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IP代理池/西拉代理ip" />
     <SUITE FILE_PATH="coverage/Python_spider$config.coverage" NAME="config Coverage Results" MODIFIED="1580805102334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章/搜索文章" />
     <SUITE FILE_PATH="coverage/Python_spider$search_ui.coverage" NAME="search_ui Coverage Results" MODIFIED="1580802492610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章/搜索文章" />
     <SUITE FILE_PATH="coverage/Python_spider$qiubai.coverage" NAME="qiubai多进程 Coverage Results" MODIFIED="1578147595904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/糗事百科" />
     <SUITE FILE_PATH="coverage/Python_spider$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1576503886615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GitHubApi" />
-    <SUITE FILE_PATH="coverage/Python_spider$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1578921730726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/试题" />
     <SUITE FILE_PATH="coverage/Python_spider$updata_rj.coverage" NAME="updata_rj Coverage Results" MODIFIED="1580799288907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章/搜索文章" />
     <SUITE FILE_PATH="coverage/Python_spider$down_img.coverage" NAME="down_img Coverage Results" MODIFIED="1580825281356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/妹子图片/24fa妹子" />
-    <SUITE FILE_PATH="coverage/Python_spider$get_dizhi.coverage" NAME="get_dizhi Coverage Results" MODIFIED="1580784682425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章" />
+    <SUITE FILE_PATH="coverage/Python_spider$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1580891591869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章/评论文章" />
     <SUITE FILE_PATH="coverage/Python_spider$search_u2.coverage" NAME="search_u2 Coverage Results" MODIFIED="1580832437881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章/搜索文章" />
+    <SUITE FILE_PATH="coverage/Python_spider$get_dizhi.coverage" NAME="get_dizhi Coverage Results" MODIFIED="1580874461418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1024文章" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/正则提取/正则表达式/sql中提取问题.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/正则提取/图片下载.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/正则提取/正则表达式/1_分组匹配问题.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/spiders/jdphone.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jdphone/Jdphone/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1139,16 +1140,6 @@
     <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/网红一小央泽coser-圣诞鹿/1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/1024文章/get_dizhi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1024文章/搜索文章/search_ui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1638">
@@ -1166,13 +1157,6 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/down_img.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1205,11 +1189,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+        <state relative-caret-position="129">
+          <caret line="85" column="35" selection-end-line="100" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/q队列1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/91爬虫/get_91zhi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding>
+            <element signature="e#11#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/91爬虫/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1024文章/get_dizhi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/妹子图片/24fa妹子/down_img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1024文章/评论文章/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
     </entry>
