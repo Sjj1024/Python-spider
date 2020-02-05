@@ -1,5 +1,5 @@
 import os
-
+import threading
 import requests
 from bs4 import BeautifulSoup
 
@@ -86,12 +86,16 @@ class FaMei:
         img_lists = self.get_imgs()
         # print(img_lists)
         # print(len(img_lists))
+        thread_list = []
         for name, img_url in enumerate(img_lists):
-            self.down_img(name, img_url)
+            # self.down_img(name, img_url)
+            thread_list.append(threading.Thread(target=self.down_img, args=(name, img_url)))
+        for t in thread_list:
+            t.start()
         print(f"成功下载了{self.suc_num}张图片+++++++++++>")
 
 
 if __name__ == '__main__':
-    url = "https://www.24fa.top/MeiNv/2020-01/70784p2.html"
+    url = "https://www.24fa.top/MeiNv/2020-02/71000.html"
     fa = FaMei(url)
     fa.run()
